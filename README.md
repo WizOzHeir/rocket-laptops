@@ -1,4 +1,5 @@
 This cool e-commerce site was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It is hosted on Netlify. Simply open https://rocket-laptops.netlify.com/ in your browser.
 
 ## Description
 This project is an online market of game laptops that you can buy via PayPal system.
