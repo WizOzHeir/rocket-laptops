@@ -77,6 +77,13 @@ button {
 	outline: none !important;
 }
 
+hr {
+    height: 2px;
+    background-color: var(--secondary-color);
+    margin: .4rem auto;
+    width: 75%;
+}
+
 .text-title {
 	font-family: 'Permanent Marker', cursive;
 	letter-spacing: .3rem;
@@ -95,6 +102,10 @@ button {
 	box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15) !important;
 }
 
+.nav-item:hover {
+    color: var(--bg-default) !important;
+}
+
 .nav-link,
 .nav-link:hover,
 .nav-link:focus {
@@ -110,24 +121,87 @@ button {
 	color: var(--hover-color) !important;
 }
 
-.btn-black {
-    background: transparent;
-    text-transform: capitalize;
-    font-size: 1rem !important;
-    color: var(--dark-color);
-    border-radius: 0 !important;
-    border: .1rem solid var(--dark-color) !important;
+.cart-icon {
+    font-size: 1.2rem;
+    color: var(--bg-default);
+    cursor: pointer;
 }
 
-.btn-black:hover {
+.cart-icon i:hover {
+    transform: translateY(-.1rem);
+    transition: all 500ms ease 0s;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.cart-empty {
+    display: none;
+}
+
+.cart-full {
+    position: absolute;
+    bottom: -.4rem;
+    left: -.7rem;
+    padding: .35rem;
+    font-size: .5rem;
+    color: var(--secondary-color);
+    font-weight: 900;
+    background-color: var(--bg-gray);
+    border-radius: 100%;
+    border: 1px solid var(--secondary-color);
+}
+
+.cart-custom-row {
+    background-color: var(--bg-gray);
+    padding: .5rem;
+}
+
+.cart-quantity-btn {
+    display: inline-block;
+    margin: 0 .7rem;
+    padding: .5rem 1rem;
+    text-transform: capitalize;
+    font-size: 1rem;
+    border: 1px solid var(--bg-default);
+    border-radius: 50%;
+    background-color: var(--bg-gray);
+}
+
+.cart-quantity-btn:hover {
     background: rgba(0, 0, 0, .2);
     transform: translateY(-.1rem);
     transition: all 500ms ease 0s;
+    cursor: pointer;
 }
 
-
-.cart-icon {
-    cursor: pointer;
-    font-size: 1.2rem;
+.cart-quantity-value {
+    display: inline-block;
+    margin: 0 .7rem;
     color: var(--bg-default);
+}
+
+.cart-clear-btn {
+    display: inline-block;
+    margin: 0 1rem;
+    padding: .5rem 3rem;
+    margin: 1rem 0;
+    text-transform: capitalize;
+    border: 1px solid var(--secondary-color);
+    border-radius: .1rem;
+    background-color: var(--bg-gray) !important;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.cart-clear-btn:hover {
+    background-color: var(--secondary-color) !important;
+    color: var(--white-color);
+    transform: translateY(-.1rem);
+    transition: all 500ms ease 0s;
+    cursor: pointer;
+}
+
+.cart-total {
+    color: var(--bg-default) !important;
 }

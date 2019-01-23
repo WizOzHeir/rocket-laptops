@@ -3,7 +3,7 @@ import PaypalExpressBtn from 'react-paypal-express-checkout';
  
 export default class PayPalButton extends React.Component {
     render() {
-        const {clearCart, history, total} = this.props;
+        const { clearCart, history, total } = this.props;
 
         const onSuccess = (payment) => {
             clearCart();
@@ -26,7 +26,15 @@ export default class PayPalButton extends React.Component {
             production: 'YOUR-PRODUCTION-APP-ID',
         }
         return (
-            <PaypalExpressBtn env={env} client={client} currency={currency} total={total} onError={onError} onSuccess={onSuccess} onCancel={onCancel} />
+            <PaypalExpressBtn
+                env={env}
+                client={client}
+                currency={currency}
+                total={total}
+                onError={onError}
+                onSuccess={onSuccess}
+                onCancel={onCancel}
+            />
         );
     };
 };
